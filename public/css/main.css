@@ -1,0 +1,97 @@
+/* Block: main */
+.main {
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Pastikan tinggi minimum agar section penuh */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Element: main__content */
+.main__title {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.main__deskripsi {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    width: 450px;
+}
+
+/* Element: main__button-wrapper */
+.main__button-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+/* Element: main__button-text */
+.main__button-text {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #5CB85F;
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Element: main__button */
+.main__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 36px;
+    opacity: 0; 
+}
+
+/* Element: main__img */
+.main__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 850px; 
+    height: 500px;
+    object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px 0;
+        padding-top: 0;
+    }
+
+    .main__title {
+        width: 225px;
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main__deskripsi {
+        margin-top: 0;
+        width: 280px;
+    }
+
+    .main__img {
+        margin-top: 20px; 
+        width: 345px;
+        height: 199px;
+        position: inherit;
+    }
+}

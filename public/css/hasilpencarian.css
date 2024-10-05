@@ -1,0 +1,237 @@
+.hasilpencarian {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  color: #000000;
+  border-radius: 8px;
+  width: 333px;
+  height: 586px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.image-content {
+  width: 100%;
+  height: 222px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+#title-car {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+#rent-car {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+#description-car,
+#capacity-car,
+#transmission-car,
+#year-car {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* Tambahan styling untuk tombol */
+.button__pilih-mobil {
+  margin-top: 10px;
+  padding: 8px 12px;
+  width: 250px;
+  height: 48px;
+  background-color: #5cb85f;
+  color: #f4f4f4;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+/* Element: search-box */
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 106px;
+  width: 1047px;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  position: relative;
+  right: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Input and Button Styling */
+.search-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-box p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.title__tipe-driver,
+.title__tanggal,
+.title__waktu-jemput,
+.title__jumlah-penumpang {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.form__tipe-driver {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.form__tanggal {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.form__waktu-jemput {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form__jumlah-penumpang {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.icon__penumpang {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+.button__cari-mobil {
+  padding: 8px 12px;
+  width: 95px;
+  height: 36px;
+  background-color: #5cb85f;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 10px;
+  cursor: pointer;
+  top: 11px;
+  position: relative;
+}
+
+/* Ubah warna border saat input ditekan (fokus) */
+.form__tipe-driver:focus,
+.form__tanggal:focus,
+.form__waktu-jemput:focus,
+.form__jumlah-penumpang:focus {
+  border-color: #5cb85f;
+  outline: none;
+}
+
+/* Mengubah background saat opsi dipilih */
+.form__tipe-driver option:checked {
+  background-color: #c9e7ca;
+  color: #5cb85f;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 16px;
+  color: #0000008a;
+}

@@ -1,0 +1,15 @@
+/* Custom CSS for Offcanvas */
+.offcanvas-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .offcanvas {
+    background-color: #f4f4f4;
+  } 
+
+  
+  

@@ -1,0 +1,149 @@
+/* Block: testimoni */
+.testimoni {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.testimoni__content-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.testimoni__content-deskripsi {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
+    color: black;
+}
+
+/* Mengatur ukuran carousel */
+.carousel {
+    width: 100%;
+    max-width: 832px; 
+    height: 270px;
+    margin: 0 auto;
+    position: relative; 
+}
+
+.carousel-item {
+    height: 100%; 
+    margin-top: 50px;
+}
+
+.profile-testimonial {
+    max-height: 100%;
+    object-fit: contain;
+    margin-left: 100px;
+}
+
+.rate-testimonial {
+    width: 100px;
+    height: auto; 
+}
+
+/* Mengatur tinggi dan lebar dari bagian review */
+.review-testimonial {
+    max-width: 415px;
+    height: 80px; 
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.review-alamat-testimonial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+}
+
+/* Carousel Navigation Icon Adjustments */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; 
+}
+
+.custom-icon {
+    width: 57px;
+    height: 68px;
+    object-fit: contain;
+}
+
+.carousel-control-prev {
+    left: 5px;
+}
+
+.carousel-control-next {
+    right: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .carousel {
+        height: 400px; 
+    }
+
+    .profile-testimonial {
+        width: 100px; 
+        height: 100px;
+    }
+
+    .rate-testimonial {
+        width: 80px;
+    }
+
+    .review-testimonial {
+        max-width: 100%;
+        text-align: start; 
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .review-alamat-testimonial{
+        text-align: start;
+    }
+
+    .custom-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-control-prev {
+        left: 5px;
+        margin-bottom: 180px;
+    }
+
+    .carousel-control-next {
+        right: 5px;
+        margin-bottom: 180px;
+    }
+
+    /* Stack images and text vertically on smaller screens */
+    .carousel-item .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-testimonial {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .rate-testimonial {
+        margin-bottom: 20px;
+    }
+}

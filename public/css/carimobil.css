@@ -1,0 +1,226 @@
+/* Block: main */
+.carimobil {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Element: main__content */
+.carimobil__title {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.carimobil__deskripsi {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  width: 450px;
+}
+
+/* Element: main__img */
+.carimobil__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 850px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Element: search-box */
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 106px;
+  width: 1047px;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  position: relative;
+  right: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Input and Button Styling */
+.search-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-box p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.title__tanggal,
+.title__waktu-jemput,
+.title__jumlah-penumpang {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.form__tanggal {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.form__waktu-jemput {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form__jumlah-penumpang {
+  height: 36px;
+  width: 211px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #3c3c3c;
+}
+
+.icon__penumpang {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+}
+
+.button__cari-mobil {
+  padding: 8px 12px;
+  width: 95px;
+  height: 36px;
+  background-color: #5cb85f;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 10px;
+  cursor: pointer;
+  top: 11px;
+  position: relative;
+}
+
+/* Ubah warna border saat input ditekan (fokus) */
+
+.form__tanggal:focus,
+.form__waktu-jemput:focus,
+.form__jumlah-penumpang:focus {
+  border-color: #5cb85f;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .carimobil {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0;
+    padding-top: 0;
+  }
+
+  .carimobil__title {
+    width: 225px;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .carimobil__deskripsi {
+    margin-top: 0;
+    width: 280px;
+  }
+
+  .carimobil__img {
+    margin-top: 20px;
+    width: 345px;
+    height: 199px;
+    position: inherit;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-box div {
+    width: 100%;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button.cari-mobil {
+    width: 100%;
+  }
+}

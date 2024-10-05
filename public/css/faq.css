@@ -1,0 +1,83 @@
+/* Block: faq */
+.faq {
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 50px 0;
+    justify-content: center;
+    align-content: center;
+}
+
+/* FAQ Content Styling */
+.faq__content {
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+.faq__content-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    color: black;
+}
+
+.faq__content-deskripsi {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: black;
+}
+
+/* FAQ List Styling */
+.accordion-button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.accordion-body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color:black;
+}
+
+/* Add spacing between accordion items */
+.accordion-item {
+    margin-bottom: 20px; 
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11);
+}
+
+/* Responsivitas untuk perangkat kecil */
+@media (max-width: 768px) {
+    .faq__content-title{
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        width: 328px;
+    }
+
+    .faq__content-deskripsi{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: center;
+        width: 328px;
+    }
+
+    .accordion-button{
+        font-size: 14px;
+        font-weight: 300;
+        width: 248px;
+    }
+
+    .accordion-body{
+        font-size: 12px;
+        font-weight: 200;
+    }
+}
