@@ -1,8 +1,16 @@
 const carRepository = require("../repositories/cars");
+const { imageUpload } = require("../utils/image-kit");
 const { NotFoundError, InternalServerError } = require("../utils/request");
 
 exports.getCars = (plate, manufacture, model) => {
-  return carRepository.getCars(plate, manufacture, model);
+  const cars = carRepository.getCars(plate, manufacture, model);
+
+  // Check if cars array is empty or undefined
+  if (!cars || cars.length === 0) {
+    throw new NotFoundError("No cars found!");
+  }
+
+  return cars;
 };
 
 exports.getCarById = (id) => {
@@ -14,15 +22,27 @@ exports.getCarById = (id) => {
   return car;
 };
 
-exports.createCar = (data) => {
+exports.createCar = async (data, file) => {
+  // Upload file
+  if (file?.image) {
+    data.image = await imageUpload(file.image);
+  }
+
+  // Create the data
   return carRepository.createCar(data);
 };
 
-exports.updateCar = (id, data) => {
+exports.updateCar = async (id, data, image) => {
   // find student is exist or not (validate the data)
   const existingCar = carRepository.getCarById(id);
   if (!existingCar) {
     throw new NotFoundError("Car is Not Found!");
+  }
+
+  // Handle car image if exist
+  if (image) {
+    const imageUrl = await imageUpload(image);
+    data.image = imageUrl;
   }
 
   // if exist, we will delete the student data

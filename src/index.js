@@ -1,5 +1,7 @@
+require("dotenv").config();
 const express = require("express"); // Import express with non-module
 require("express-async-errors");
+const fileUpload = require("express-fileupload");
 const router = require("./routes");
 const { errorHandler, notFoundURLHandler } = require("./middlewares/errors");
 
@@ -9,6 +11,13 @@ const port = 4040;
 
 /* We need to activate body parser/reader */
 app.use(express.json());
+
+/* We need to read form-body (body parser/reader) (req.files) if you want upload file */
+app.use(
+  fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 }, // 50 MB
+  })
+);
 
 // All routes define here
 app.use("/", router);

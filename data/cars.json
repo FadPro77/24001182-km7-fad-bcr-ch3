@@ -801,5 +801,39 @@
             "Remote fuel lid release",
             "Traveler/mini trip computer"
         ]
+    },
+    {
+        "id": "c2793ad5-a894-4f9e-9d29-07ae9d4745fd",
+        "plate": "APH-125",
+        "manufacture": "Toyota",
+        "model": "GR86",
+        "rentPerDay": "500000",
+        "capacity": "4",
+        "description": "new GR",
+        "availableAt": "03:00",
+        "transmission": "Manual",
+        "available": "true",
+        "type": "Sedan",
+        "year": "2024",
+        "option": "test",
+        "specs": "test",
+        "image": "https://ik.imagekit.io/RapF77/Ignition-Red-1_ek2Y4dSVF.png"
+    },
+    {
+        "id": "67c31386-0cbb-4a7a-82bd-aae98ef20e08",
+        "plate": "APH-123",
+        "manufacture": "Toyota",
+        "model": "GR86",
+        "rentPerDay": "500000",
+        "capacity": "4",
+        "description": "new GR",
+        "availableAt": "03:00",
+        "transmission": "Manual",
+        "available": "true",
+        "type": "Sedan",
+        "year": "2024",
+        "option": "test",
+        "specs": "test",
+        "image": "https://ik.imagekit.io/RapF77/Ignition-Red-1_Q6ug6DdK4.png"
     }
 ]
