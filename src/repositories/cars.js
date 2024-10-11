@@ -50,15 +50,11 @@ exports.createCar = (data) => {
   cars.push(newCar);
 
   // Save the latest data to json
-  try {
-    fs.writeFileSync(
-      path.resolve(__dirname, "../../data/cars.json"),
-      JSON.stringify(cars, null, 4),
-      "utf-8"
-    );
-  } catch (error) {
-    console.error("Error writing to file:", error);
-  }
+  fs.writeFileSync(
+    path.resolve(__dirname, "../../data/cars.json"),
+    JSON.stringify(cars, null, 4),
+    "utf-8"
+  );
 
   return newCar;
 };
@@ -75,15 +71,11 @@ exports.updateCar = (id, data) => {
   Object.assign(car, data);
 
   // Update the json data
-  try {
-    fs.writeFileSync(
-      path.resolve(__dirname, "../../data/cars.json"),
-      JSON.stringify(cars, null, 4),
-      "utf-8"
-    );
-  } catch (error) {
-    console.error("Error writing to file:", error);
-  }
+  fs.writeFileSync(
+    path.resolve(__dirname, "../../data/cars.json"),
+    JSON.stringify(cars, null, 4),
+    "utf-8"
+  );
 
   return car;
 };
@@ -100,15 +92,10 @@ exports.deleteCarById = (id) => {
   const deletedCar = cars.splice(carIndex, 1);
 
   // Update the json
-  try {
-    fs.writeFileSync(
-      path.resolve(__dirname, "../../data/cars.json"),
-      JSON.stringify(cars, null, 4),
-      "utf-8"
-    );
-  } catch (error) {
-    console.error("Error writing to file:", error);
-  }
-
+  fs.writeFileSync(
+    path.resolve(__dirname, "../../data/cars.json"),
+    JSON.stringify(cars, null, 4),
+    "utf-8"
+  );
   return deletedCar;
 };
