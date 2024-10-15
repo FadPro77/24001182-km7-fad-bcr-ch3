@@ -51,18 +51,30 @@ exports.validateCreateCar = (req, res, next) => {
     specs: z.array(z.string()).optional().nullable(),
   });
 
-  // Validate body
+  const validateFileBody = z
+    .object({
+      image: z
+        .object({
+          name: z.string(),
+          data: z.any(),
+        })
+        .nullable()
+        .optional(),
+    })
+    .nullable()
+    .optional();
+
+  // Validate
   const result = validateBody.safeParse(req.body);
   if (!result.success) {
-    console.error("Validation errors:", result.error.errors); // Log validation errors
+    // If validation fails, return error messages
     throw new BadRequestError(result.error.errors);
   }
 
-  // Validate files
+  //Validate
   const resultValidateFiles = validateFileBody.safeParse(req.files);
   if (!resultValidateFiles.success) {
-    console.error("File validation errors:", resultValidateFiles.error.errors); // Log file validation errors
-    throw new BadRequestError(resultValidateFiles.error.errors);
+    throw new BadRequestError(result.error.errors);
   }
 
   next();
