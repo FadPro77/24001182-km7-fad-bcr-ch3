@@ -38,25 +38,30 @@ exports.getCarById = (id) => {
 };
 
 exports.createCar = (data) => {
-  // Find the max index to defnine the new data id
-  const maxId = cars.reduce((max, car) => car.id > max && car.id, 0);
+  try {
+    // Find the max index to define the new data id
+    const maxId = cars.reduce((max, car) => (car.id > max ? car.id : max), 0);
 
-  const newCar = {
-    id: uuidv4(),
-    ...data,
-  };
+    const newCar = {
+      id: uuidv4(),
+      ...data,
+    };
 
-  /* Add data to current array students */
-  cars.push(newCar);
+    // Add data to current array cars
+    cars.push(newCar);
 
-  // Save the latest data to json
-  fs.writeFileSync(
-    path.resolve(__dirname, "../../data/cars.json"),
-    JSON.stringify(cars, null, 4),
-    "utf-8"
-  );
+    // Save the latest data to json
+    fs.writeFileSync(
+      path.resolve(__dirname, "../../data/cars.json"),
+      JSON.stringify(cars, null, 4),
+      "utf-8"
+    );
 
-  return newCar;
+    return newCar;
+  } catch (error) {
+    console.error("Failed to save car data:", error); // Log file saving error
+    throw new InternalServerError("Failed to save data: " + error.message);
+  }
 };
 
 exports.updateCar = (id, data) => {

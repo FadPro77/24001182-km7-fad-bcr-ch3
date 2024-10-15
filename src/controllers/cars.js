@@ -19,8 +19,14 @@ exports.getCarById = (req, res, next) => {
 };
 
 exports.createCar = async (req, res, next) => {
-  const data = await carService.createCar(req.body, req.files);
-  successResponse(res, data);
+  try {
+    console.log("Received request to create car:", req.body); // Log incoming data
+    const data = await carService.createCar(req.body, req.files);
+    successResponse(res, data);
+  } catch (error) {
+    console.error("Error creating car:", error); // Log error details
+    next(error); // Pass the error to the error handling middleware
+  }
 };
 
 exports.updateCar = async (req, res, next) => {
